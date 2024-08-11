@@ -17,6 +17,14 @@
         font-weight: 700;
         font-size: 2vw;
     }
+    p{
+        position: fixed;
+        color: green;
+        font-family: "Courier Prime", monospace;
+        background-color: transparent;
+        font-weight: 700;
+        font-size: 1vw;
+    }
     textarea:focus, input:focus{
     outline: none;
 }
@@ -79,6 +87,7 @@ Homeonaut ARG
     <h1 id = "hobo">> ENTER CODE:<br><br> ></h1>
     <input id="input" oninput="skibidi()"  maxlength="16" type="text" placeholder="" onblur="this.focus()" autofocus /> 
     
+    <p>IF YOU GET STUCK DM @TEEJIO ON DISCORD PLEASE PLEASE</p>
     <script>
                 let vid = document.getElementById("audio");
                 vid.volume = 0.4;
@@ -179,7 +188,7 @@ node.addEventListener("keydown", function(event) {
                 mySound = new sound(`valid.wav`);
                 mySound.playbackRate = 0.8 + (0.4 * Math.random());
                 mySound.play();
-                hobo.innerHTML += "> COLOR: PURPLE<br>> STATUS: ALIVE<br>> NOTES: WHY TF DO I <br>GOTTA WRITE THIS SHIT<br> ITS ME";
+                hobo.innerHTML += "> COLOR: PURPLE<br>> STATUS: ALIVE<br>> MY HUSBAND IS DOUG <br>> ENEMY OF BEG<br> HOMER";
                 break;
             case "BEG":
                 mySound = new sound(`valid.wav`);
@@ -203,6 +212,30 @@ node.addEventListener("keydown", function(event) {
                 mySound.playbackRate = 0.8 + (0.4 * Math.random());
                 mySound.play();
                 hobo.innerHTML += "> RIDDLE HINT:<br>> NOT A WHAT.<br>> A WHEN.";
+                break;
+            case "WING":
+            case "WING GASTER":
+            case "WINGY":
+            case "DING":
+            case "WING DING":
+            case "WD GASTER":
+                mySound = new sound(`valid.wav`);
+                mySound.playbackRate = 0.8 + (0.4 * Math.random());
+                mySound.play();
+                hobo.innerHTML += "> who up:<br>> royaling thier.<br>> science.";
+                break;
+            case "MISSION":
+                mySound = new sound(`valid.wav`);
+                mySound.playbackRate = 0.8 + (0.4 * Math.random());
+                mySound.play();
+                hobo.innerHTML += "> THE MISSION<br>> INSIDE<br>> YOU";
+                break;
+            case "FRIEND":
+            case "FIM":
+                mySound = new sound(`valid.wav`);
+                mySound.playbackRate = 0.8 + (0.4 * Math.random());
+                mySound.play();
+                hobo.innerHTML += "> FRIEND:<br>> INSIDE<br>> ME";
                 break;
             default:
                 mySound = new sound(`WRONG.wav`);
