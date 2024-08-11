@@ -1,0 +1,143 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+    body {
+        background-color: black;
+    }
+    input{
+        position: fixed;
+        color: green;
+        font-family: "Courier Prime", monospace;
+        background-color: transparent;
+        transform: rotate3d(0.5, -1, 0, 30deg);
+        top: 13.7vw;
+        left: 9vw;
+        text-transform: uppercase;
+        border: none;
+        font-weight: 700;
+        font-size: 2vw;
+    }
+    textarea:focus, input:focus{
+    outline: none;
+}
+    h1{
+        font-family: "Courier Prime", monospace;
+        position: fixed;
+        color: green;
+        transform: rotate3d(0.5, -1, 0, 30deg);
+   top: 8vw;
+        left: 8vw;     
+        font-size: 2vw;
+    }
+    img {
+        width: 100vw;
+        position: fixed;
+        right: 0px;
+        box-shadow: inset 0 0 120px #000, inset 0 0 80px #000, inset 0 0 40px #000;
+    }
+</style>
+
+<head> 
+    <title> 
+Homeonaut ARG
+    </title> 
+</head> 
+<body >
+    <script>
+
+        function sound(src) {
+          this.sound = document.createElement("audio");
+          this.sound.src = src;
+          this.sound.setAttribute("preload", "auto");
+          this.sound.setAttribute("controls", "none");
+          this.sound.style.display = "none";
+          document.body.appendChild(this.sound);
+          this.play = function(){
+            this.sound.play();
+          }
+          this.stop = function(){
+            this.sound.pause();
+          }
+        }
+        var mySound
+        function skibidi(){
+           
+            mySound = new sound(`typing${1+ Math.floor(Math.random() * 5)}.wav`);
+            mySound.playbackRate = 0.8 + (0.4 * Math.random());
+            mySound.play();
+        }
+        
+        let vid = document.getElementById("audio");
+        vid.volume = 0.4;
+            </script>
+    <audio  autoplay loop  id = "audio" >
+        <source src="musicloop.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+      </audio>
+
+    <img src="BG.png" alt="background">
+    <h1 id = "hobo">> ENTER CODE:<br><br> ></h1>
+    <input id="input" oninput="skibidi()"  maxlength="16" type="text" placeholder="" onblur="this.focus()" autofocus /> 
+    
+    <script>
+        const node = document.getElementById("input");
+        const text = document.getElementById("hobo");
+node.addEventListener("keydown", function(event) {
+   
+    if (event.key === "Enter") {
+         hobo.innerHTML = "> ENTER CODE:<br><br> ><br>><br>";
+        switch(node.value.toString().toUpperCase()) {
+            case "SKIBIDI":
+            case "OHIO":
+            case "GYATT":
+            case "SIGMA":
+                hobo.innerHTML += "> WSG MY SKIBIDI";
+                break;
+            case "CAPP":
+            case "TEEJIO":
+            case "COMET":
+            case "JUICE":
+            case "COMETFLAMER":
+            case "JUICEPRESS":
+                hobo.innerHTML += `> ${node.value.toString().toUpperCase()} IS MY GOAT`;
+                break;
+            case "RIZZLER":
+            case "RIZZ":
+                hobo.innerHTML += "> GYATTTTTT DAMN";
+                break;
+            case "AMONG US":
+            case "AMONGUS":
+            case "AMONG":
+                hobo.innerHTML += "> IM NOT AMONG US";
+                break;
+            case "DOUG":
+                hobo.innerHTML += "> COLOR: GREEN<br>> STATUS: UNKNOWN<br>> NOTES: MY LOVE.<br> MY LIFE.";
+                break;
+            case "HOMER":
+            case "ME":
+            case "WISH":
+            hobo.innerHTML += "> TYPE THE ANSWER<br>> ALWAYS LOOKED <br>TO <BR>>  BUT IMPOSSIBLE TO <br>REACH<br>> WHAT AM I?";
+                break;
+            case "TOMORROW":
+                window.open("https://www.youtube.com/watch?v=-pN1zqqLjB8");
+                break;
+            case "13152":
+                window.open("secretgame.rar");
+                hobo.innerHTML += "> END OF ARG<br>> THANKS FOR PLAYING";
+                break;
+            case "YOU":
+                hobo.innerHTML += "> COLOR: PURPLE<br>> STATUS: ALIVE<br>> NOTES: WHY TF DO I <br>GOTTA WRITE THIS SHIT<br> ITS ME";
+                break;
+            case "BEG":
+                hobo.innerHTML += "> COLOR: PURPLE, YELLOW<br>> NOTES: A SPECIES OF<br>LIVING PLANET<br>> ALL ASSHOLES";
+                break;
+            default:
+                hobo.innerHTML += "> CODE INVALID";
+                break;
+    // code block
+}
+        node.value = "";
+    }
+});
+    </script>
+</body>
