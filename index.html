@@ -68,8 +68,7 @@ Homeonaut ARG
             mySound.play();
         }
         
-        let vid = document.getElementById("audio");
-        vid.volume = 0.4;
+
             </script>
     <audio  autoplay loop  id = "audio" >
         <source src="musicloop.mp3" type="audio/mpeg">
@@ -81,6 +80,23 @@ Homeonaut ARG
     <input id="input" oninput="skibidi()"  maxlength="16" type="text" placeholder="" onblur="this.focus()" autofocus /> 
     
     <script>
+                let vid = document.getElementById("audio");
+                vid.volume = 0.4;
+        function sound(src) {
+          this.sound = document.createElement("audio");
+          this.sound.src = src;
+          this.sound.setAttribute("preload", "auto");
+          this.sound.setAttribute("controls", "none");
+          this.sound.style.display = "none";
+          document.body.appendChild(this.sound);
+          this.play = function(){
+            this.sound.play();
+          }
+          this.stop = function(){
+            this.sound.pause();
+          }
+        }
+        var mySound;
         const node = document.getElementById("input");
         const text = document.getElementById("hobo");
 node.addEventListener("keydown", function(event) {
@@ -92,6 +108,9 @@ node.addEventListener("keydown", function(event) {
             case "OHIO":
             case "GYATT":
             case "SIGMA":
+                mySound = new sound(`valid.wav`);
+                mySound.playbackRate = 0.8 + (0.4 * Math.random());
+                mySound.play();
                 hobo.innerHTML += "> WSG MY SKIBIDI";
                 break;
             case "CAPP":
@@ -100,7 +119,21 @@ node.addEventListener("keydown", function(event) {
             case "JUICE":
             case "COMETFLAMER":
             case "JUICEPRESS":
+            case "EGGTILLIUS":
+            case "EVAN":
+            case "CRAYONPAWS":
+            case "CRAIN":
+            case "CLEEB":
+            case "CLEEBUS":
+                mySound = new sound(`valid.wav`);
+                mySound.playbackRate = 0.8 + (0.4 * Math.random());
+                mySound.play();
                 hobo.innerHTML += `> ${node.value.toString().toUpperCase()} IS MY GOAT`;
+                break;
+            case "FREAK":
+            case "FREAKY":
+            case "FREAKER":
+            case "PORN":
                 break;
             case "RIZZLER":
             case "RIZZ":
@@ -109,13 +142,22 @@ node.addEventListener("keydown", function(event) {
             case "AMONG US":
             case "AMONGUS":
             case "AMONG":
+                mySound = new sound(`valid.wav`);
+                mySound.playbackRate = 0.8 + (0.4 * Math.random());
+                mySound.play();
                 hobo.innerHTML += "> IM NOT AMONG US";
                 break;
             case "DOUG":
+                mySound = new sound(`valid.wav`);
+                mySound.playbackRate = 0.8 + (0.4 * Math.random());
+                mySound.play();
                 hobo.innerHTML += "> COLOR: GREEN<br>> STATUS: UNKNOWN<br>> NOTES: MY LOVE.<br> MY LIFE.";
                 break;
             case "WISH":
-            hobo.innerHTML += "> TYPE THE ANSWER<br>> YOU ALWAYS LOOK<br>TOWARDS IT<BR>>  BUT IMPOSSIBLE TO <br>REACH<br>> WHAT AM I?";
+                mySound = new sound(`valid.wav`);
+                mySound.playbackRate = 0.8 + (0.4 * Math.random());
+                mySound.play();
+                hobo.innerHTML += "> TYPE THE ANSWER<br>> YOU ALWAYS LOOK<br>TOWARDS IT<BR>>  BUT IMPOSSIBLE TO <br>REACH<br>> WHAT AM I?";
                 break;
             case "FUTURE":
             case "LATER":
@@ -134,15 +176,38 @@ node.addEventListener("keydown", function(event) {
             case "HOMER":
             case "ME":
             case "YOU":
+                mySound = new sound(`valid.wav`);
+                mySound.playbackRate = 0.8 + (0.4 * Math.random());
+                mySound.play();
                 hobo.innerHTML += "> COLOR: PURPLE<br>> STATUS: ALIVE<br>> NOTES: WHY TF DO I <br>GOTTA WRITE THIS SHIT<br> ITS ME";
                 break;
             case "BEG":
+                mySound = new sound(`valid.wav`);
+                mySound.playbackRate = 0.8 + (0.4 * Math.random());
+                mySound.play();
                 hobo.innerHTML += "> COLOR: PURPLE, YELLOW<br>> NOTES: A SPECIES OF<br>LIVING PLANET<br>> ALL ASSHOLES";
                 break;
             case "ASTRID":
+                mySound = new sound(`valid.wav`);
+                mySound.playbackRate = 0.8 + (0.4 * Math.random());
+                mySound.play();
                 hobo.innerHTML += "> COLOR: WHITE, YELLOW<br>> NOTES: A SPECIES OF<br>CAT-LIKE COMETS<br>> BABOS";
                 break;
+            case "HELP":
+            case "HELP ME":
+            case "WHAT HELP ME":
+            case "WHAT HELP ME!":
+            case "WHAT? HELP ME":
+            case "WHAT? HELP ME!":
+                mySound = new sound(`valid.wav`);
+                mySound.playbackRate = 0.8 + (0.4 * Math.random());
+                mySound.play();
+                hobo.innerHTML += "> RIDDLE HINT:<br>> NOT AN OBJECT";
+                break;
             default:
+                mySound = new sound(`WRONG.wav`);
+                mySound.playbackRate = 0.8 + (0.4 * Math.random());
+                mySound.play();
                 hobo.innerHTML += "> CODE INVALID";
                 break;
     // code block
